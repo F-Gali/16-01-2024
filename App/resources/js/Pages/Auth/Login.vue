@@ -33,6 +33,17 @@ const submit = () => {
     <GuestLayout>
         <Head title="Log in" />
 
+        <div class="-mx-6 -mt-3 mb-6 text-sm font-medium text-center text-slate-300 border-b border-slate-300 dark:text-slate-300 dark:border-slate-300">
+            <ul class="flex flex-wrap justify-center">
+                <li class="me-2">
+                    <a href="#" class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500" aria-current="page">Login</a>
+                </li>
+                <li class="me-2">
+                    <a href="/registro" class="inline-block p-4 border-b-2 border-transparent text-slate-400 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Registro</a>
+                </li>
+            </ul>
+        </div>
+
         <div v-if="status" class="mb-4 text-sm font-medium text-green-600">
             {{ status }}
         </div>
@@ -73,26 +84,19 @@ const submit = () => {
                 <label class="flex items-center">
                     <Checkbox name="remember" v-model:checked="form.remember" />
                     <span class="ms-2 text-sm text-gray-600"
-                        >Remember me</span
+                        >Recuerdame</span
                     >
                 </label>
             </div>
 
             <div class="mt-4 flex items-center justify-end">
-                <Link
-                    v-if="canResetPassword"
-                    :href="route('password.request')"
-                    class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                    Forgot your password?
-                </Link>
 
                 <PrimaryButton
                     class="ms-4"
                     :class="{ 'opacity-25': form.processing }"
                     :disabled="form.processing"
                 >
-                    Log in
+                    Iniciar Sesión
                 </PrimaryButton>
             </div>
         </form>
