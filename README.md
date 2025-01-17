@@ -16,7 +16,7 @@ Dado que las instrucciones de instalación pueden variar dependiendo del SO/Dist
 * Instalar los paquetes necesarios con Composer y NPM
     * Correr `composer install`
     * Correr `npm install`
-* Correr `npm run build` para compilar el bundle con Vite
+* Correr `npm run build` para empaquetar el bundle con Vite
 * Correr `php artisan migrate` y responder 'yes' para generar la base de datos, también ejecutará las migraciones
     - ^En caso de seer necesario, es posible limpiar la DB con `php artisan migrate:fresh`.
 * Finalmente, ejecutar el proyecto con `composer run dev`.
