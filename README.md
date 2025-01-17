@@ -18,9 +18,9 @@ Dado que las instrucciones de instalación pueden variar dependiendo del SO/Dist
     * Correr `npm install`
 * Correr `npm run build` para empaquetar el bundle con Vite
 * Correr `php artisan migrate` y responder 'yes' para generar la base de datos, también ejecutará las migraciones
-    - ^En caso de seer necesario, es posible limpiar la DB con `php artisan migrate:fresh`.
+    - ^En caso de ser necesario, es posible limpiar la DB con `php artisan migrate:fresh`.
 * Finalmente, ejecutar el proyecto con `composer run dev`.
-    - ^Este comando es una utilidad que en el fondo ejecuta en paralelo `npm run dev` (necesario para el hot reload) y `php artisan serve` (necesario para levantar el servidor http de desarrollo).
+    - ^Este comando es una utilidad que en el fondo ejecuta `npm run dev` (necesario para el hot reload) y `php artisan serve` (necesario para levantar el servidor http de desarrollo) en paralelo.
 * Ingresar a [http://localhost:8000](http://localhost:8000)
-    ^En caso de que haya problemas al acceder, dentro del .env cambiar `http://localhost` a `http://127.0.0.1`, esto ocurre porque `php artisan serve` se ejecuta con --host=127.0.0.1, lo que a veces puede causar problemas, presumo que interfiere con el vhost de desarrollo.
+    ^En caso de que haya problemas al acceder, dentro del .env cambiar `http://localhost` a `http://127.0.0.1`, esto ocurre porque `php artisan serve` se ejecuta con --host=127.0.0.1 por defecto, lo que a veces puede causar problemas, presumo que interfiere con el vhost de desarrollo.
 * Listo
